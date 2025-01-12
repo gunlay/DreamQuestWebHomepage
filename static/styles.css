@@ -203,9 +203,13 @@ nav {
 }
 
 .platform-icon {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     transition: transform 0.3s ease;
+    background: #FFFFFF;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
 }
 
 .icon-wrapper span {
@@ -237,6 +241,8 @@ nav {
 /* 悬浮效果 */
 .qr-code:hover .platform-icon {
     transform: scale(1.1);
+    background: #FFFFFF;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
 }
 
 .qr-code:hover .qr-popup {
@@ -258,6 +264,12 @@ nav {
 
     .qr-code:hover .qr-popup {
         transform: translate(0, -50%) scale(1);
+    }
+
+    .platform-icon {
+        width: 55px;
+        height: 55px;
+        padding: 12px;
     }
 }
 
