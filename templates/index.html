@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>梦寻DreamQuest - AI梦境探索</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="hero-background"></div>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="DreamQuest">
+                    <span class="logo-text">梦寻DreamQuest</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#home">首页</a>
+                    <a href="#features">功能介绍</a>
+                    <a href="#about">关于我们</a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 class="gradient-text">梦境分析就用梦寻DreamQuest</h1>
+                    <p class="subtitle">AI驱动的梦境探索之旅</p>
+                </div>
+            </section>
+
+            <section class="download">
+                <div class="download-options">
+                    <div class="qr-code ios">
+                        <div class="icon-wrapper">
+                            <img src="{{ url_for('static', filename='images/icon-ios.png') }}" alt="iOS" class="platform-icon">
+                            <span>iOS版本</span>
+                        </div>
+                        <div class="qr-popup">
+                            <img src="{{ url_for('static', filename='images/qr-ios.png') }}" alt="iOS下载二维码">
+                        </div>
+                    </div>
+                    <div class="qr-code android">
+                        <div class="icon-wrapper">
+                            <img src="{{ url_for('static', filename='images/icon-android.png') }}" alt="Android" class="platform-icon">
+                            <span>Android版本</span>
+                        </div>
+                        <div class="qr-popup">
+                            <img src="{{ url_for('static', filename='images/qr-android.png') }}" alt="Android下载二维码">
+                        </div>
+                    </div>
+                    <div class="qr-code miniapp">
+                        <div class="icon-wrapper">
+                            <img src="{{ url_for('static', filename='images/icon-wechat.png') }}" alt="小程序" class="platform-icon">
+                            <span>小程序版本</span>
+                        </div>
+                        <div class="qr-popup">
+                            <img src="{{ url_for('static', filename='images/qr-miniapp.png') }}" alt="小程序二维码">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="floating-elements">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+    </div>
+</body>
+</html> 
