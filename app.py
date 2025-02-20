@@ -7,6 +7,14 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
+@app.route('/privacy.html')
+def privacy():
+    return render_template('privacy.html')
+
+@app.route('/terms.html')
+def terms():
+    return render_template('terms.html')
+
 @app.route('/static/<path:path>')
 def send_static(path):
     return send_from_directory('static', path)
