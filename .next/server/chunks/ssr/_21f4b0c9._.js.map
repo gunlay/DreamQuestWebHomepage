@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 23, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/app/page.module.css [app-rsc] (css module)"],"sourcesContent":["__turbopack_context__.v({\n});\n"],"names":[],"mappings":"AAAA;AACA"}},
+    {"offset": {"line": 31, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/xxx74/Desktop/Project/dream-home/src/app/about/page.tsx"],"sourcesContent":["import React from 'react';\nimport styles from '../page.module.css';\n\nexport default function About() {\n  return (\n    <div className={styles.page}>\n      <main className={styles.main}>\n        <h1>关于我们</h1>\n        <p>欢迎来到Dream Home，这是一个专注于帮助人们找到理想居所的平台。</p>\n        <p>我们致力于为您提供最优质的房产信息和服务。</p>\n      </main>\n    </div>\n  );\n}"],"names":[],"mappings":";;;;;;;;;;;AAGe,SAAS;IACtB,qBACE,kYAAC;QAAI,WAAW,OAAO,IAAI;kBACzB,cAAA,kYAAC;YAAK,WAAW,OAAO,IAAI;;8BAC1B,kYAAC;8BAAG;;;;;;8BACJ,kYAAC;8BAAE;;;;;;8BACH,kYAAC;8BAAE;;;;;;;;;;;;;;;;;AAIX","debugId":null}}]
+}
