@@ -1,13 +1,37 @@
+'use client';
+
 import Image from 'next/image';
-import styles from './page.module.scss';
+// Import images
+import logoImg from '../assets/images/logo.jpg';
+import iconIosImg from '../assets/images/icon-ios.png';
+import iconAndroidImg from '../assets/images/icon-android.png';
+import iconWechatImg from '../assets/images/icon-wechat.png';
+import iosQrImg from '../assets/images/ios-qr.png';
+import androidQrImg from '../assets/images/android-qr.png';
+import miniappQrImg from '../assets/images/miniapp-qr.png';
+import xiaohongshuImg from '../assets/images/xiaohongshu.png';
+import bilibiliImg from '../assets/images/bilibili.png';
+import wechatImg from '../assets/images/wechat.png';
+import wechatQrImg from '../assets/images/wechat-qr.jpg';
+import maskGroupImg from '../assets/images/mask_group.png';
+import starsImg from '../assets/images/stars.png';
+import styles from './page.module.css';
+
 
 export default function Home() {
+  function scrollToTop(event: React.MouseEvent<HTMLAnchorElement>) {
+    event.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+  }
   return (
     <div>
       <div className={styles['hero-background']}></div>
       <div
         className={styles['content-background']}
-        style={{ background: "#000 url('/images/mask_group.png') repeat top center" }}
+        style={{ background: `#000 url(${maskGroupImg.src}) repeat top center` }}
       >
         <div className={styles['content-circles']}>
           <div className={`${styles['content-circle']} ${styles['content-circle-1']}`}></div>
@@ -16,29 +40,27 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.container}>
-        <header>
-          <nav>
+        <header className={styles.header}>
+          <nav className={styles.nav}>
             <div className={styles.logo}>
-              <Image src="/images/logo.png" alt="DreamQuest" width={120} height={40} />
+              <Image src={logoImg} alt="DreamQuest" width={120} height={40} className={styles['logo-image']} />
               <span className={styles['logo-text']}>梦寻DreamQuest</span>
             </div>
             <div className={styles['nav-links']}>
               <a
                 href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
+                onClick={scrollToTop}
+                className={styles['nav-link']}
               >
                 首页
               </a>
-              <a href="#features">功能介绍</a>
-              <a href="#about">关于我们</a>
+              <a href="#features" className={styles['nav-link']}>功能介绍</a>
+              <a href="#about" className={styles['nav-link']}>关于我们</a>
             </div>
           </nav>
         </header>
 
-        <main>
+        <main className={styles.main}>
           <section id="home" className={styles.hero}>
             <div className={styles['hero-content']}>
               <h1 className={styles['gradient-text']}>让梦里的秘密，成为醒时的指引</h1>
@@ -51,7 +73,7 @@ export default function Home() {
                 <div className={`${styles['qr-code']} ${styles['ios']}`}>
                   <div className={styles['icon-wrapper']}>
                     <Image
-                      src="/images/icon-ios.png"
+                      src={iconIosImg}
                       alt="iOS"
                       width={24}
                       height={24}
@@ -60,13 +82,13 @@ export default function Home() {
                     <span>iOS版本</span>
                   </div>
                   <div className={styles['qr-popup']}>
-                    <Image src="/images/ios-qr.png" alt="iOS下载二维码" width={200} height={200} />
+                    <Image src={iosQrImg} alt="iOS下载二维码" width={200} height={200} />
                   </div>
                 </div>
                 <div className={`${styles['qr-code']} ${styles.android}`}>
                   <div className={styles['icon-wrapper']}>
                     <Image
-                      src="/images/icon-android.png"
+                      src={iconAndroidImg}
                       alt="Android"
                       width={24}
                       height={24}
@@ -76,7 +98,7 @@ export default function Home() {
                   </div>
                   <div className={styles['qr-popup']}>
                     <Image
-                      src="/images/android-qr.png"
+                      src={androidQrImg}
                       alt="Android下载二维码"
                       width={200}
                       height={200}
@@ -86,7 +108,7 @@ export default function Home() {
                 <div className={`${styles['qr-code']} ${styles.miniapp}`}>
                   <div className={styles['icon-wrapper']}>
                     <Image
-                      src="/images/icon-wechat.png"
+                      src={iconWechatImg}
                       alt="小程序"
                       width={24}
                       height={24}
@@ -96,7 +118,7 @@ export default function Home() {
                   </div>
                   <div className={styles['qr-popup']}>
                     <Image
-                      src="/images/miniapp-qr.png"
+                      src={miniappQrImg}
                       alt="小程序二维码"
                       width={200}
                       height={200}
@@ -107,14 +129,14 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="features" className={styles.features}>
+          <section id="features" className={`${styles.section} ${styles.features}`}>
             <div className={styles['section-content']}>
               <h2 className={styles['section-title']}>功能介绍</h2>
               <div className={styles['content-list']}>
                 <div className={styles['feature-intro']}>
                   <h3>梦寻 - 解锁梦境的秘密</h3>
                   <p>
-                    梦境一直是人类探索未知自我的途径，而"梦寻"旨在通过创新的技术，帮助您解读每一个梦境背后的深层含义。
+                    梦境一直是人类探索未知自我的途径，而&quot;梦寻&quot;旨在通过创新的技术，帮助您解读每一个梦境背后的深层含义。
                   </p>
                 </div>
 
@@ -133,13 +155,13 @@ export default function Home() {
                     <div className={styles['feature-item']}>
                       <h4>2. 梦境记录与分析</h4>
                       <p>
-                        通过简洁的操作，记录您的梦境内容，"梦寻"将基于您的输入，结合心理学与梦境学的理论进行分析，帮助您理解梦境中的象征与含义。
+                        通过简洁的操作，记录您的梦境内容，&quot;梦寻&quot;将基于您的输入，结合心理学与梦境学的理论进行分析，帮助您理解梦境中的象征与含义。
                       </p>
                     </div>
                     <div className={styles['feature-item']}>
                       <h4>3. 个性化解梦建议</h4>
                       <p>
-                        每个人的梦境都是独一无二的。"梦寻"根据您的历史梦境、个人偏好以及心理状态，为您提供精准的解梦建议和深刻的心理洞察。
+                        每个人的梦境都是独一无二的。&quot;梦寻&quot;根据您的历史梦境、个人偏好以及心理状态，为您提供精准的解梦建议和深刻的心理洞察。
                       </p>
                     </div>
                     <div className={styles['feature-item']}>
@@ -151,7 +173,7 @@ export default function Home() {
                     <div className={styles['feature-item']}>
                       <h4>5. 梦境预测与建议</h4>
                       <p>
-                        根据您的梦境趋势，结合数据智能，"梦寻"可以为您提供未来可能的心理发展方向和生活建议，帮助您更好地规划未来。
+                        根据您的梦境趋势，结合数据智能，&quot;梦寻&quot;可以为您提供未来可能的心理发展方向和生活建议，帮助您更好地规划未来。
                       </p>
                     </div>
                   </div>
@@ -187,18 +209,18 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="about" className="about">
-            <div className="section-content">
-              <h2 className="section-title">关于我们</h2>
-              <div className="social-links">
+          <section id="about" className={`${styles.section}`}>
+            <div className={styles['section-content']}>
+              <h2 className={styles['section-title']}>关于我们</h2>
+              <div className={styles['social-links']}>
                 <a
                   href="http://xhslink.com/a/6TwkYuo3sDJ5"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="social-item"
+                  className={styles['social-item']}
                 >
-                  <div className="social-icon">
-                    <Image src="/images/xiaohongshu.png" alt="小红书" width={24} height={24} />
+                  <div className={styles['social-icon']}>
+                    <Image src={xiaohongshuImg} alt="小红书" width={24} height={24} />
                     <span>小红书</span>
                   </div>
                 </a>
@@ -206,21 +228,21 @@ export default function Home() {
                   href="https://b23.tv/RFiA964"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="social-item"
+                  className={styles['social-item']}
                 >
-                  <div className="social-icon">
-                    <Image src="/images/bilibili.png" alt="哔哩哔哩" width={24} height={24} />
+                  <div className={styles['social-icon']}>
+                    <Image src={bilibiliImg} alt="哔哩哔哩" width={24} height={24} />
                     <span>哔哩哔哩</span>
                   </div>
                 </a>
-                <div className="social-item">
-                  <div className="social-icon">
-                    <Image src="/images/wechat.png" alt="微信群" width={24} height={24} />
+                <div className={styles['social-item']}>
+                  <div className={styles['social-icon']}>
+                    <Image src={wechatImg} alt="微信群" width={24} height={24} />
                     <span>联系我们</span>
                   </div>
-                  <div className="qr-popup">
+                  <div className={styles['qr-popup']}>
                     <Image
-                      src="/images/wechat-qr.jpg"
+                      src={wechatQrImg}
                       alt="微信群二维码"
                       width={200}
                       height={200}
@@ -228,11 +250,11 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="footer-links">
-                <a href="/privacy.html" target="_blank">
+              <div className={styles['footer-links']}>
+                <a href="/privacy.html" target="_blank" className={styles['footer-link']}>
                   隐私政策
                 </a>
-                <a href="/terms.html" target="_blank">
+                <a href="/terms.html" target="_blank" className={styles['footer-link']}>
                   用户服务协议
                 </a>
               </div>
@@ -250,7 +272,7 @@ export default function Home() {
       <div className={styles['stars-container']}>
         <div
           className={styles.stars}
-          style={{ background: "#000 url('/images/stars.png') repeat top center" }}
+          style={{ background: `#000 url(${starsImg.src}) repeat top center` }}
         ></div>
       </div>
 

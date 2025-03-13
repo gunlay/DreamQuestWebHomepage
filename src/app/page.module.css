@@ -40,7 +40,7 @@
 }
 
 /* 导航栏样式 */
-header {
+.header {
   padding: 15px 0;
   position: fixed;
   top: 0;
@@ -52,7 +52,7 @@ header {
   z-index: 1000;
 }
 
-nav {
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -65,7 +65,7 @@ nav {
   gap: 12px;
 }
 
-.logo img {
+.logo-image {
   height: 24px;
   width: auto;
 }
@@ -86,7 +86,7 @@ nav {
   align-items: center;
 }
 
-.nav-links a {
+.nav-link {
   color: var(--text-color);
   text-decoration: none;
   font-size: 14px;
@@ -97,11 +97,11 @@ nav {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.nav-links a:hover {
+.nav-link:hover {
   opacity: 1;
 }
 
-.nav-links a::after {
+.nav-link::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -112,7 +112,7 @@ nav {
   transition: width 0.3s ease;
 }
 
-.nav-links a:hover::after {
+.nav-link:hover::after {
   width: 100%;
 }
 
@@ -358,7 +358,7 @@ nav {
     gap: 20px;
   }
 
-  .nav-links a {
+  .nav-link {
     font-size: 14px;
   }
 
@@ -434,7 +434,7 @@ html {
 }
 
 /* 每个区块的基本样式 */
-section {
+.section {
   padding: 60px 0;
   display: block;
 }
@@ -498,7 +498,7 @@ section {
 }
 
 /* 调整内容区域的上边距，防止被固定导航栏遮挡 */
-main {
+.main {
   padding-top: 60px;
 }
 
@@ -656,7 +656,7 @@ main {
 }
 
 .stars {
-  background: #000 url('../images/stars.png') repeat top center;
+  background: #000 url('../assets/images/stars.png') repeat top center;
   position: absolute;
   top: 0;
   left: 0;
@@ -684,7 +684,7 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('../images/mask_group.png') center/cover no-repeat;
+  background: url('../assets/images/mask_group.png') center/cover no-repeat;
   opacity: 0;
   transition: opacity 0.8s ease;
   z-index: 0;
@@ -775,23 +775,23 @@ main {
   padding-bottom: 20px;
 }
 
-.footer-links a {
+.footer-link {
   color: var(--text-secondary);
   font-size: 14px;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.footer-links a:hover {
+.footer-link:hover {
   color: var(--text-color);
 }
 
-.social-links a.social-item {
+.social-item {
   text-decoration: none;
   transition: transform 0.3s ease;
 }
 
-.social-links a.social-item:hover {
+.social-item:hover {
   transform: scale(1.1);
 }
 

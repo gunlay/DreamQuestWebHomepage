@@ -629,7 +629,7 @@ main {
 }
 
 .page-module-scss-module__rcUngW__stars {
-  background: #000 url("../images/stars.png") top;
+  background: #000 url("../media/stars.7174c695.png") top;
   position: absolute;
   top: 0;
   left: 0;
@@ -655,7 +655,7 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("../images/mask_group.png") center / cover no-repeat;
+  background: url("../media/mask_group.d9940525.png") center / cover no-repeat;
   opacity: 0;
   transition: opacity .8s;
   z-index: 0;
