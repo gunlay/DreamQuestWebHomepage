@@ -1,12 +1,2 @@
-__pycache__/
-*.pyc
-.env
-.venv
-env/
-venv/
-ENV/
-.vercel
-*.log
-.DS_Store
-static/.DS_Store
-static/images/.DS_Store
+.next
+node_modules
