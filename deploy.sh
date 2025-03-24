@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # 配置信息
-SERVER_USER="your-username"
-SERVER_HOST="your-server-ip"
-SERVER_PATH="/path/to/your/app"
+SERVER_USER="root"
+SERVER_HOST="dreams"
+SERVER_PATH="/var/www/DreamHomePage"
 
 # 本地构建和打包
 echo "📦 Building and packaging..."
