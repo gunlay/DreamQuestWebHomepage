@@ -1,0 +1,145 @@
+.heroBackground {
+  background: radial-gradient(
+    circle at 50% 50%, 
+    rgba(50, 50, 120, 0.12) 0%, 
+    rgba(0, 0, 0, 0) 70%
+  );
+}
+
+.contentBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  z-index: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, 
+      rgba(15, 22, 66, 0.85), 
+      rgba(26, 27, 75, 0.85), 
+      rgba(44, 25, 80, 0.85)
+    );
+    z-index: 1;
+  }
+}
+
+.contentCircles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.contentCircle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(180px);
+  opacity: 0.15;
+
+  &.circle1 {
+    top: 20%;
+    left: 15%;
+    width: 400px;
+    height: 400px;
+    background: var(--primary-color);
+  }
+
+  &.circle2 {
+    top: 60%;
+    right: 15%;
+    width: 500px;
+    height: 500px;
+    background: var(--secondary-color);
+  }
+
+  &.circle3 {
+    bottom: 15%;
+    left: 35%;
+    width: 450px;
+    height: 450px;
+    background: var(--primary-color);
+  }
+}
+
+.floatingElements {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(180px);
+  opacity: 0.15;
+
+  &.circle1 {
+    top: 10%;
+    left: 10%;
+    width: 400px;
+    height: 400px;
+    background: var(--primary-color);
+  }
+
+  &.circle2 {
+    top: 50%;
+    right: 10%;
+    width: 500px;
+    height: 500px;
+    background: var(--secondary-color);
+  }
+
+  &.circle3 {
+    bottom: 10%;
+    left: 30%;
+    width: 450px;
+    height: 450px;
+    background: var(--primary-color);
+  }
+}
+
+.starsContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+.starEffect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+} 

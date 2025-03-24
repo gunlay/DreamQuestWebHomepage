@@ -1,0 +1,60 @@
+.container {
+  --primary-color: #6C63FF;
+  --text-color: #333333;
+  --text-secondary: #666666;
+  --background: #FFFFFF;
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: var(--background);
+}
+
+.title {
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: var(--primary-color);
+  margin: 30px 0 15px;
+}
+
+.paragraph {
+  margin-bottom: 16px;
+  color: var(--text-color);
+}
+
+.list {
+  margin: 16px 0;
+  padding-left: 20px;
+}
+
+.listItem {
+  margin-bottom: 8px;
+  color: var(--text-color);
+}
+
+.italic {
+  font-style: italic;
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 16px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+}
