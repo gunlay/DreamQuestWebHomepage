@@ -1,13 +1,13 @@
 'use client';
 
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import styles from './styles.module.scss';
 import { aboutData } from './data';
 
 interface SocialItemProps {
   platform: string;
-  icon: string;
+  icon: string | StaticImageData;
   link?: string;
   alt: string;
   hasQR?: boolean;
@@ -36,7 +36,7 @@ const SocialItem: React.FC<SocialItemProps> = ({
 
   if (link) {
     return (
-      <Link href={link} target="_blank" className={styles.socialItem}>
+      <Link href={link} target="_blank" rel="noopener noreferrer" className={styles.socialItem}>
         {content}
       </Link>
     );
@@ -59,7 +59,7 @@ export default function About() {
 
         <div className={styles.footerLinks}>
           {aboutData.footerLinks.map((item, index) => (
-            <Link key={index} href={item.link}>
+            <Link key={index} target="_blank" href={item.link}>
               {item.text}
             </Link>
           ))}

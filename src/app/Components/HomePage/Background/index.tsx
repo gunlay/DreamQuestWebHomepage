@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import styles from './styles.module.scss';
 
+
 interface Particle {
   x: number;
   y: number;
@@ -119,7 +120,7 @@ export default function Background() {
       <div 
         className={styles.contentBackground}
         style={{
-          backgroundImage: "url('/images/mask_group.png')"
+          backgroundImage: "url('https://aloss-qinghua-image.oss-cn-shanghai.aliyuncs.com/images/WechatIMG621.jpg')"
         }}
       >
         <div className={styles.contentCircles}>
@@ -139,7 +140,7 @@ export default function Background() {
         <div 
           className={styles.stars} 
           style={{
-            background: "#000 url('/images/stars.png') repeat top center"
+            background: "#000 url('https://aloss-qinghua-image.oss-cn-shanghai.aliyuncs.com/images/WechatIMG620.jpg') repeat top center"
           }}
         />
       </div>

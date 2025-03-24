@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack --port 8888",
+    "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start -p 8888",
+    "start": "next start -p 3100",
     "lint": "next lint",
     "deploy-files": "mkdir -p deploy && cp package.json deploy/ && cp -r .next deploy/ && cp pnpm-lock.yaml deploy/",
     "deploy-clean": "rm -rf deploy dist.tar.gz",

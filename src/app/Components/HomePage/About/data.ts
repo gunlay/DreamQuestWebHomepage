@@ -1,8 +1,12 @@
-import WechatQr from '../../../../../public/images/wechat-qr.jpg'
+import WechatQr from '@images/wechat-qr.jpg'
+import Bili from '@images/bilibili.png'
+import Red from '@images/xiaohongshu.png'
+import Wechat from '@images/wechat.png'
+import { StaticImageData } from 'next/image';
 
 interface SocialLink {
   platform: string;
-  icon: string;
+  icon: string | StaticImageData;
   link?: string;
   alt: string;
   hasQR?: boolean;
@@ -25,19 +29,19 @@ export const aboutData: AboutData = {
   socialLinks: [
     {
       platform: "小红书",
-      icon: "/images/xiaohongshu.png",
+      icon: Red,
       link: "http://xhslink.com/a/6TwkYuo3sDJ5",
       alt: "小红书"
     },
     {
       platform: "哔哩哔哩",
-      icon: "/images/bilibili.png",
+      icon: Bili,
       link: "https://b23.tv/RFiA964",
       alt: "哔哩哔哩"
     },
     {
       platform: "联系我们",
-      icon: "/images/wechat.png",
+      icon: Wechat,
       alt: "微信群",
       hasQR: true,
       qrCode: WechatQr as unknown as string

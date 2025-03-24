@@ -2,6 +2,7 @@
 
 import styles from './styles.module.scss';
 import Image from 'next/image';
+import Logo from '@public/images/logo.png'
 
 export default function Header() {
   const scrollToTop = (event: React.MouseEvent<HTMLAnchorElement>) => {
@@ -16,7 +17,7 @@ export default function Header() {
     <header className={styles.header}>
       <nav className={styles.nav}>
         <div className={styles.logo}>
-          <Image src="/images/logo.png" alt="DreamQuest" width={24} height={24} />
+          <Image src={Logo} alt="DreamQuest" width={24} height={24} />
           <span className={styles.logoText}>梦寻DreamQuest</span>
         </div>
         <div className={styles.navLinks}>

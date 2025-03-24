@@ -3,10 +3,13 @@
 import styles from './styles.module.scss';
 import Image, { StaticImageData } from 'next/image';
 import miniappQr from '@images/miniapp-qr.png';
+import iOSIcon from '@images/icon-ios.png'
+import androidIcon from '@images/icon-android.png'
+import wechatIcon from '@images/icon-wechat.png'
 import { useEffect, useRef, useState } from 'react';
 
 interface QRCodeProps {
-  icon: string;
+  icon: string | StaticImageData;
   alt: string;
   qrCode?: string | StaticImageData;
   text: string;
@@ -40,7 +43,7 @@ function QRCode({ icon, alt, qrCode, text, comingSoon }: QRCodeProps) {
     <div ref={containerRef} className={`${styles.qrCode} ${comingSoon ? styles.comingSoon : ''}`}>
       <div className={styles.iconWrapper}>
         <Image 
-          src={`/images/${icon}`} 
+          src={icon} 
           alt={alt} 
           width={50} 
           height={50} 
@@ -73,19 +76,19 @@ export default function Hero() {
         
         <div className={styles.downloadOptions}>
           <QRCode 
-            icon="icon-ios.png"
+            icon={iOSIcon}
             alt="iOS"
             text="iOS版本"
             comingSoon={true}
           />
           <QRCode 
-            icon="icon-android.png"
+            icon={androidIcon}
             alt="Android"
             text="Android版本"
             comingSoon={true}
           />
           <QRCode 
-            icon="icon-wechat.png"
+            icon={wechatIcon}
             alt="小程序"
             qrCode={miniappQr}
             text="小程序版本"
