@@ -1,0 +1,34 @@
+{
+  "name": "dream-home",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start -p 3100",
+    "lint": "next lint",
+    "deploy-files": "mkdir -p deploy && cp package.json deploy/ && cp -r .next deploy/ && cp pnpm-lock.yaml deploy/",
+    "deploy-clean": "rm -rf deploy dist.tar.gz",
+    "deploy-prepare": "npm run deploy-clean && pnpm build && npm run deploy-files",
+    "deploy-install": "cd deploy && pnpm install --prod",
+    "deploy-compress": "tar -czf dist.tar.gz deploy/",
+    "deploy-decompress": "tar -xzf dist.tar.gz",
+    "deploy-all": "npm run deploy-prepare && npm run deploy-install && npm run deploy-compress",
+    "deploy-server": "npm run deploy-decompress && cd deploy && pnpm install --prod && pm2 restart ecosystem.config.js || pm2 start ecosystem.config.js"
+  },
+  "dependencies": {
+    "next": "15.2.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.0.0",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "14.1.0",
+    "sass": "^1.69.0",
+    "typescript": "^5.0.0"
+  }
+}

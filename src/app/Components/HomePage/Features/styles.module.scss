@@ -1,0 +1,137 @@
+.features {
+  padding: 60px 0;
+  display: block;
+}
+
+.sectionContent {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sectionTitle {
+  font-size: 36px;
+  margin-bottom: 60px;
+  text-align: left;
+  background: linear-gradient(135deg, #fff, var(--primary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contentList {
+  width: 100%;
+}
+
+.featureIntro {
+  margin-bottom: 60px;
+
+  h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #fff, var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.listItem {
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 40px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  h3 {
+    font-size: 24px;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+.arrow {
+  font-size: 24px;
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+
+  .active & {
+    transform: rotate(270deg);
+  }
+}
+
+.itemContent {
+  display: none;
+  padding-top: 15px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+
+  .active & {
+    display: block;
+  }
+
+  p {
+    margin-bottom: 15px;
+  }
+}
+
+.featureItem {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+  }
+
+  p {
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+    font-size: 16px;
+  }
+}
+
+.featureConclusion {
+  text-align: center;
+  font-size: 20px;
+  color: var(--text-color);
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .featureIntro h3 {
+    font-size: 28px;
+  }
+
+  .listItem h3 {
+    font-size: 24px;
+  }
+
+  .featureItem h4 {
+    font-size: 18px;
+  }
+
+  .featureConclusion {
+    font-size: 18px;
+  }
+} 
